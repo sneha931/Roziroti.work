@@ -54,7 +54,7 @@ li {
 }
 
 .arrow::after {
-    content: '\2192'; /* Unicode character for right arrow */
+    content: '\2192'; 
 }
 
 
@@ -512,7 +512,7 @@ li {
     align-items: center;
     
     height: 40vh;
-    padding: 20px; /* Adjust padding as needed */
+    padding: 20px; 
   }
   
   .expe span {
@@ -530,20 +530,20 @@ li {
   }
   
   p {
-    margin-top: 40px; /* Remove default margin */
+    margin-top: 40px; 
   }
   
   img.al1 {
     transform: rotate(-15deg);
     width: 100px;
     height: 280px;
-    margin-left: 20px; /* Adjust margin as needed */
+    margin-left: 20px; 
   }
   img.al2 {
     transform: rotate(0deg);
     width: 130px;
     height: 130px;
-    margin-left: 20px; /* Adjust margin as needed */
+    margin-left: 20px; 
   }
 
 .lstsec {
