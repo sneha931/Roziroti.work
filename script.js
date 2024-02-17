@@ -30,12 +30,11 @@ const initSlider = () => {
             document.removeEventListener("mouseup", handleMouseUp);
         }
 
-        // Add event listeners for drag interaction
+        
         document.addEventListener("mousemove", handleMouseMove);
         document.addEventListener("mouseup", handleMouseUp);
     });
 
-    // Slide images according to the slide button clicks
     slideButtons.forEach(button => {
         button.addEventListener("click", () => {
             const direction = button.id === "prev-slide" ? -1 : 1;
@@ -44,20 +43,17 @@ const initSlider = () => {
         });
     });
 
-     // Show or hide slide buttons based on scroll position
     const handleSlideButtons = () => {
         slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
         slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
     }
 
-    // Update scrollbar thumb position based on image scroll
     const updateScrollThumbPosition = () => {
         const scrollPosition = imageList.scrollLeft;
         const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
         scrollbarThumb.style.left = `${thumbPosition}px`;
     }
 
-    // Call these two functions when image list scrolls
     imageList.addEventListener("scroll", () => {
         updateScrollThumbPosition();
         handleSlideButtons();
@@ -80,5 +76,5 @@ let slideIndex = 0;
                 slideIndex = 1;
             }
             slides[slideIndex - 1].style.display = 'block';
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+            setTimeout(showSlides, 2000); 
         }
